@@ -4,7 +4,6 @@ function AuthGuardOutlet(){
     //获取鉴权结果
     const localAuth = JSON.parse(localStorage.getItem("auth"));
     const result = localAuth ? localAuth.auth : false;
-    console.log(result);
 
     //判断鉴权结果
     return result ? <Outlet /> : (<Navigate to={"/login"}/>)
